@@ -1,0 +1,103 @@
+2021-02-22 21:22:32,661 DEBUG cd visitor && /home/maryam/.local/bin/virtualenv -q env -p python3
+2021-02-22 21:22:33,441 LOG Getting app frappe
+2021-02-22 21:22:33,441 DEBUG cd visitor/apps && git clone https://github.com/frappe/frappe.git  --depth 1 --origin upstream
+2021-02-22 21:23:26,311 LOG installing frappe
+2021-02-22 21:23:26,311 DEBUG visitor/env/bin/pip install -q -U -e visitor/apps/frappe 
+2021-02-22 21:24:53,313 DEBUG cd visitor/apps/frappe && yarn install
+2021-02-22 21:28:33,294 DEBUG cd visitor/apps/frappe && yarn install
+2021-02-22 21:28:51,143 DEBUG cd visitor && bench build
+2021-02-22 21:28:51,668 INFO /home/maryam/.local/bin/bench build
+2021-02-22 21:29:44,994 LOG setting up backups
+2021-02-22 21:29:45,004 INFO Bench visitor initialized
+2021-02-22 21:33:17,793 INFO /home/maryam/.local/bin/bench start
+2021-02-22 21:33:20,123 INFO /home/maryam/.local/bin/bench serve --port 8001
+2021-02-22 21:33:20,126 INFO /home/maryam/.local/bin/bench worker --queue long
+2021-02-22 21:33:20,131 INFO /home/maryam/.local/bin/bench watch
+2021-02-22 21:33:20,145 INFO /home/maryam/.local/bin/bench worker --queue default
+2021-02-22 21:33:20,153 INFO /home/maryam/.local/bin/bench schedule
+2021-02-22 21:33:20,157 INFO /home/maryam/.local/bin/bench worker --queue short
+2021-02-22 21:35:36,118 INFO /home/maryam/.local/bin/bench new-site visit.test
+2021-02-22 21:41:30,820 INFO /home/maryam/.local/bin/bench new-site visit.test
+2021-02-22 21:42:08,809 INFO /home/maryam/.local/bin/bench --site visit.test add-to-hosts
+2021-02-23 00:00:02,568 INFO /home/maryam/.local/bin/bench --verbose --site all backup
+2021-02-23 01:22:08,970 INFO /home/maryam/.local/bin/bench start
+2021-02-23 01:22:10,950 INFO /home/maryam/.local/bin/bench serve --port 8001
+2021-02-23 01:22:10,957 INFO /home/maryam/.local/bin/bench watch
+2021-02-23 01:22:10,964 INFO /home/maryam/.local/bin/bench schedule
+2021-02-23 01:22:10,980 INFO /home/maryam/.local/bin/bench worker --queue short
+2021-02-23 01:22:11,056 INFO /home/maryam/.local/bin/bench worker --queue long
+2021-02-23 01:22:11,089 INFO /home/maryam/.local/bin/bench worker --queue default
+2021-02-23 01:23:40,298 INFO /home/maryam/.local/bin/bench start
+2021-02-23 01:23:42,315 INFO /home/maryam/.local/bin/bench serve --port 8001
+2021-02-23 01:23:42,346 INFO /home/maryam/.local/bin/bench schedule
+2021-02-23 01:23:42,373 INFO /home/maryam/.local/bin/bench watch
+2021-02-23 01:23:42,381 INFO /home/maryam/.local/bin/bench worker --queue short
+2021-02-23 01:23:42,394 INFO /home/maryam/.local/bin/bench worker --queue default
+2021-02-23 01:23:42,408 INFO /home/maryam/.local/bin/bench worker --queue long
+2021-02-23 01:24:21,174 INFO /home/maryam/.local/bin/bench start
+2021-02-23 01:24:23,303 INFO /home/maryam/.local/bin/bench worker --queue short
+2021-02-23 01:24:23,313 INFO /home/maryam/.local/bin/bench watch
+2021-02-23 01:24:23,316 INFO /home/maryam/.local/bin/bench schedule
+2021-02-23 01:24:23,365 INFO /home/maryam/.local/bin/bench worker --queue long
+2021-02-23 01:24:23,368 INFO /home/maryam/.local/bin/bench serve --port 8001
+2021-02-23 01:24:23,424 INFO /home/maryam/.local/bin/bench worker --queue default
+2021-02-23 01:34:56,188 INFO /home/maryam/.local/bin/bench new-app visitor_management
+2021-02-23 01:34:56,191 LOG creating new app visitor_management
+2021-02-23 01:35:25,282 LOG installing visitor_management
+2021-02-23 01:35:25,283 DEBUG ./env/bin/pip install -q -U -e ./apps/visitor_management 
+2021-02-23 01:35:27,921 DEBUG bench build --app visitor_management
+2021-02-23 01:35:28,212 INFO /home/maryam/.local/bin/bench build --app visitor_management
+2021-02-23 01:37:48,995 INFO /home/maryam/.local/bin/bench start
+2021-02-23 01:37:51,274 INFO /home/maryam/.local/bin/bench serve --port 8001
+2021-02-23 01:37:51,426 INFO /home/maryam/.local/bin/bench watch
+2021-02-23 01:37:51,433 INFO /home/maryam/.local/bin/bench worker --queue default
+2021-02-23 01:37:51,444 INFO /home/maryam/.local/bin/bench worker --queue short
+2021-02-23 01:37:51,491 INFO /home/maryam/.local/bin/bench worker --queue long
+2021-02-23 01:37:51,524 INFO /home/maryam/.local/bin/bench schedule
+2021-02-23 01:38:22,999 INFO /home/maryam/.local/bin/bench --site tenant.test install-app visitor_management
+2021-02-23 01:38:33,699 INFO /home/maryam/.local/bin/bench --site visit.test install-app visitor_management
+2021-02-23 01:43:08,795 INFO /home/maryam/.local/bin/bench start
+2021-02-23 01:43:11,061 INFO /home/maryam/.local/bin/bench serve --port 8001
+2021-02-23 01:43:11,156 INFO /home/maryam/.local/bin/bench schedule
+2021-02-23 01:43:11,180 INFO /home/maryam/.local/bin/bench worker --queue long
+2021-02-23 01:43:11,202 INFO /home/maryam/.local/bin/bench watch
+2021-02-23 01:43:11,226 INFO /home/maryam/.local/bin/bench worker --queue default
+2021-02-23 01:43:11,303 INFO /home/maryam/.local/bin/bench worker --queue short
+2021-02-23 01:47:59,331 INFO /home/maryam/.local/bin/bench start
+2021-02-23 01:48:01,746 INFO /home/maryam/.local/bin/bench schedule
+2021-02-23 01:48:01,831 INFO /home/maryam/.local/bin/bench serve --port 8001
+2021-02-23 01:48:01,849 INFO /home/maryam/.local/bin/bench worker --queue short
+2021-02-23 01:48:01,866 INFO /home/maryam/.local/bin/bench watch
+2021-02-23 01:48:01,875 INFO /home/maryam/.local/bin/bench worker --queue default
+2021-02-23 01:48:01,904 INFO /home/maryam/.local/bin/bench worker --queue long
+2021-02-23 01:51:33,219 INFO /home/maryam/.local/bin/bench --site visit.test console
+2021-02-23 01:52:22,546 INFO /home/maryam/.local/bin/bench --site visit.test mariadb
+2021-02-23 01:53:02,951 INFO /home/maryam/.local/bin/bench --site visit.test mariadb
+2021-02-23 01:53:41,069 INFO /home/maryam/.local/bin/bench --site visit.test browse
+2021-02-23 01:56:27,005 INFO /home/maryam/.local/bin/bench --site visit.test set-config --global developer_mode 1
+2021-02-23 02:08:09,084 INFO /home/maryam/.local/bin/bench --site visit.test set-config --global developer_mode 1
+2021-02-23 02:28:27,548 INFO /home/maryam/.local/bin/bench start
+2021-02-23 02:28:29,748 INFO /home/maryam/.local/bin/bench schedule
+2021-02-23 02:28:29,778 INFO /home/maryam/.local/bin/bench serve --port 8001
+2021-02-23 02:28:29,778 INFO /home/maryam/.local/bin/bench worker --queue short
+2021-02-23 02:28:29,792 INFO /home/maryam/.local/bin/bench worker --queue long
+2021-02-23 02:28:29,815 INFO /home/maryam/.local/bin/bench watch
+2021-02-23 02:28:29,918 INFO /home/maryam/.local/bin/bench worker --queue default
+2021-02-23 02:28:42,262 INFO /home/maryam/.local/bin/bench visit.site browse
+2021-02-23 02:28:42,268 WARNING /home/maryam/.local/bin/bench visit.site browse executed with exit code 2
+2021-02-23 02:29:21,751 INFO /home/maryam/.local/bin/bench --site visit.site browse
+2021-02-23 02:29:31,490 INFO /home/maryam/.local/bin/bench --site visitor.site browse
+2021-02-23 02:29:37,757 INFO /home/maryam/.local/bin/bench --site visit.site browse
+2021-02-23 02:29:53,240 INFO /home/maryam/.local/bin/bench --site visit.test browse
+2021-02-23 02:38:02,538 INFO /home/maryam/.local/bin/bench clear cache
+2021-02-23 02:38:02,540 WARNING /home/maryam/.local/bin/bench clear cache executed with exit code 2
+2021-02-23 02:38:19,043 INFO /home/maryam/.local/bin/bench clear-cache
+2021-02-23 02:38:38,096 INFO /home/maryam/.local/bin/bench --site visit.test clear-cache
+2021-02-23 02:47:29,168 INFO /home/maryam/.local/bin/bench --site visit.test clear-cache
+2021-02-23 03:53:38,129 INFO /home/maryam/.local/bin/bench start
+2021-02-23 03:53:40,179 INFO /home/maryam/.local/bin/bench serve --port 8001
+2021-02-23 03:53:40,311 INFO /home/maryam/.local/bin/bench schedule
+2021-02-23 03:53:40,342 INFO /home/maryam/.local/bin/bench watch
+2021-02-23 03:53:40,374 INFO /home/maryam/.local/bin/bench worker --queue short
+2021-02-23 03:53:40,416 INFO /home/maryam/.local/bin/bench worker --queue default
+2021-02-23 03:53:40,465 INFO /home/maryam/.local/bin/bench worker --queue long

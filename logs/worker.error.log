@@ -1,0 +1,712 @@
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    self.run()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    self.run()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+01:22:03 Worker rq:worker:d1bc273b86004003b657c249aa869a6d.maryam-VirtualBox.4633.default: found an unhandled exception, quitting...
+Traceback (most recent call last):
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/rq/worker.py", line 572, in work
+    result = self.dequeue_job_and_maintain_ttl(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/rq/worker.py", line 639, in dequeue_job_and_maintain_ttl
+    result = self.queue_class.dequeue_any(self.queues, timeout,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/rq/queue.py", line 600, in dequeue_any
+    result = cls.lpop(queue_keys, timeout, connection=connection)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/rq/queue.py", line 572, in lpop
+    result = connection.blpop(queue_keys, timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+01:22:03 Worker rq:worker:424a0354b3d947608a550052097672c1.maryam-VirtualBox.4637.short: found an unhandled exception, quitting...
+Traceback (most recent call last):
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/rq/worker.py", line 572, in work
+    result = self.dequeue_job_and_maintain_ttl(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/rq/worker.py", line 639, in dequeue_job_and_maintain_ttl
+    result = self.queue_class.dequeue_any(self.queues, timeout,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/rq/queue.py", line 600, in dequeue_any
+    result = cls.lpop(queue_keys, timeout, connection=connection)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/rq/queue.py", line 572, in lpop
+    result = connection.blpop(queue_keys, timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+01:22:03 Worker rq:worker:383a3f24ba8b441fbefdedc4c6633dd9.maryam-VirtualBox.4632.long: found an unhandled exception, quitting...
+Traceback (most recent call last):
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/rq/worker.py", line 572, in work
+    result = self.dequeue_job_and_maintain_ttl(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/rq/worker.py", line 639, in dequeue_job_and_maintain_ttl
+    result = self.queue_class.dequeue_any(self.queues, timeout,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/rq/queue.py", line 600, in dequeue_any
+    result = cls.lpop(queue_keys, timeout, connection=connection)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/rq/queue.py", line 572, in lpop
+    result = connection.blpop(queue_keys, timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 1900, in blpop
+    return self.execute_command('BLPOP', *keys)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 901, in execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/utils/bench_helper.py", line 101, in <module>
+Traceback (most recent call last):
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/utils/bench_helper.py", line 101, in <module>
+    main()
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name='bench')
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/click/core.py", line 764, in __call__
+    main()
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name='bench')
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/click/core.py", line 764, in __call__
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/utils/bench_helper.py", line 101, in <module>
+    main()
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name='bench')
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/click/core.py", line 764, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/click/core.py", line 717, in main
+    rv = self.invoke(ctx)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/click/core.py", line 1137, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/click/core.py", line 1137, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/click/core.py", line 956, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/click/core.py", line 555, in invoke
+    return callback(*args, **kwargs)
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/commands/scheduler.py", line 167, in start_worker
+    return self.main(*args, **kwargs)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/click/core.py", line 717, in main
+    rv = self.invoke(ctx)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/click/core.py", line 1137, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/click/core.py", line 1137, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/click/core.py", line 956, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/click/core.py", line 555, in invoke
+    return callback(*args, **kwargs)
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/commands/scheduler.py", line 167, in start_worker
+    start_worker(queue, quiet = quiet)
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/utils/background_jobs.py", line 151, in start_worker
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+    return self.main(*args, **kwargs)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/click/core.py", line 717, in main
+    rv = self.invoke(ctx)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/click/core.py", line 1137, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/click/core.py", line 1137, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/click/core.py", line 956, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/click/core.py", line 555, in invoke
+    return callback(*args, **kwargs)
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/commands/scheduler.py", line 167, in start_worker
+    start_worker(queue, quiet = quiet)
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/utils/background_jobs.py", line 151, in start_worker
+    Worker(queues, name=get_worker_name(queue)).work(logging_level = logging_level)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/rq/worker.py", line 610, in work
+    self.register_death()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/rq/worker.py", line 318, in register_death
+    p.execute()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11001. Connection refused.
+    return self._parser.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+    Worker(queues, name=get_worker_name(queue)).work(logging_level = logging_level)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/rq/worker.py", line 610, in work
+    self.register_death()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/rq/worker.py", line 318, in register_death
+    p.execute()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11001. Connection refused.
+    start_worker(queue, quiet = quiet)
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/utils/background_jobs.py", line 151, in start_worker
+    Worker(queues, name=get_worker_name(queue)).work(logging_level = logging_level)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/rq/worker.py", line 610, in work
+    self.register_death()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/rq/worker.py", line 318, in register_death
+    p.execute()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 4012, in execute
+    conn = self.connection_pool.get_connection('MULTI',
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:11001. Connection refused.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+Traceback (most recent call last):
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 198, in _read_from_socket
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    data = recv(self._sock, socket_read_size)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/_compat.py", line 72, in recv
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+    return sock.recv(*args, **kwargs)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/utils/bench_helper.py", line 101, in <module>
+    main()
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name='bench')
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/click/core.py", line 764, in __call__
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    return self.main(*args, **kwargs)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/click/core.py", line 717, in main
+    rv = self.invoke(ctx)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/click/core.py", line 1137, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/click/core.py", line 1137, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/click/core.py", line 956, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/click/core.py", line 555, in invoke
+    return callback(*args, **kwargs)
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/commands/scheduler.py", line 167, in start_worker
+    start_worker(queue, quiet = quiet)
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/utils/background_jobs.py", line 151, in start_worker
+    Worker(queues, name=get_worker_name(queue)).work(logging_level = logging_level)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/rq/worker.py", line 610, in work
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+    self.register_death()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/rq/worker.py", line 318, in register_death
+    p.execute()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 4019, in execute
+    return execute(conn, stack, raise_on_error)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3894, in _execute_transaction
+    self.parse_response(connection, '_')
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3977, in parse_response
+    result = Redis.parse_response(
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 222, in _read_from_socket
+    raise ConnectionError("Error while reading from socket: %s" %
+redis.exceptions.ConnectionError: Error while reading from socket: (104, 'Connection reset by peer')
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+Traceback (most recent call last):
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 198, in _read_from_socket
+    data = recv(self._sock, socket_read_size)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/_compat.py", line 72, in recv
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+    return sock.recv(*args, **kwargs)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/utils/bench_helper.py", line 101, in <module>
+    main()
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name='bench')
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/click/core.py", line 764, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/click/core.py", line 717, in main
+    rv = self.invoke(ctx)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/click/core.py", line 1137, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/click/core.py", line 1137, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/click/core.py", line 956, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/click/core.py", line 555, in invoke
+    return callback(*args, **kwargs)
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/commands/scheduler.py", line 167, in start_worker
+    start_worker(queue, quiet = quiet)
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/utils/background_jobs.py", line 151, in start_worker
+    Worker(queues, name=get_worker_name(queue)).work(logging_level = logging_level)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/rq/worker.py", line 610, in work
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+    self.register_death()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/rq/worker.py", line 318, in register_death
+    p.execute()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 4019, in execute
+    return execute(conn, stack, raise_on_error)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3894, in _execute_transaction
+    self.parse_response(connection, '_')
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3977, in parse_response
+    result = Redis.parse_response(
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 915, in parse_response
+    response = connection.read_response()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 222, in _read_from_socket
+    raise ConnectionError("Error while reading from socket: %s" %
+redis.exceptions.ConnectionError: Error while reading from socket: (104, 'Connection reset by peer')
+01:55:49 Traceback (most recent call last):
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/rq/worker.py", line 975, in perform_job
+    rv = job.perform()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/rq/job.py", line 696, in perform
+    self._result = self._execute()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/rq/job.py", line 719, in _execute
+    return self.func(*self.args, **self.kwargs)
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/utils/background_jobs.py", line 100, in execute_job
+    method(**kwargs)
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/core/doctype/user/user.py", line 1097, in create_contact
+    contact.insert(ignore_permissions=True, ignore_links=ignore_links, ignore_mandatory=ignore_mandatory)
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/model/document.py", line 232, in insert
+    self._validate_links()
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/model/document.py", line 816, in _validate_links
+    frappe.throw(_("Could not find {0}").format(msg),
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/__init__.py", line 416, in throw
+    msgprint(msg, raise_exception=exc, title=title, indicator='red', is_minimizable=is_minimizable, wide=wide, as_list=as_list)
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/__init__.py", line 395, in msgprint
+    _raise_exception()
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/__init__.py", line 349, in _raise_exception
+    raise raise_exception(msg)
+frappe.exceptions.LinkValidationError: Could not find User Id: m@g.com
+Traceback (most recent call last):
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/rq/worker.py", line 975, in perform_job
+    rv = job.perform()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/rq/job.py", line 696, in perform
+    self._result = self._execute()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/rq/job.py", line 719, in _execute
+    return self.func(*self.args, **self.kwargs)
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/utils/background_jobs.py", line 100, in execute_job
+    method(**kwargs)
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/core/doctype/user/user.py", line 1097, in create_contact
+    contact.insert(ignore_permissions=True, ignore_links=ignore_links, ignore_mandatory=ignore_mandatory)
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/model/document.py", line 232, in insert
+    self._validate_links()
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/model/document.py", line 816, in _validate_links
+    frappe.throw(_("Could not find {0}").format(msg),
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/__init__.py", line 416, in throw
+    msgprint(msg, raise_exception=exc, title=title, indicator='red', is_minimizable=is_minimizable, wide=wide, as_list=as_list)
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/__init__.py", line 395, in msgprint
+    _raise_exception()
+  File "/home/maryam/Documents/visitor/apps/frappe/frappe/__init__.py", line 349, in _raise_exception
+    raise raise_exception(msg)
+frappe.exceptions.LinkValidationError: Could not find User Id: m@g.com
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    self.run()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    self.run()
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3718, in run
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    pubsub.get_message(ignore_subscribe_messages=True,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3617, in get_message
+    response = self.parse_response(block=False, timeout=timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/client.py", line 3503, in parse_response
+    if not block and not conn.can_read(timeout=timeout):
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 734, in can_read
+    return self._parser.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+    return self._parser.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.    return self._parser.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 321, in can_read
+    return self._buffer and self._buffer.can_read(timeout)
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 230, in can_read
+    self._read_from_socket(timeout=timeout,
+  File "/home/maryam/Documents/visitor/env/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+

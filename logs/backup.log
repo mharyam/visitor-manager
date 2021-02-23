@@ -1,0 +1,6 @@
+mysqldump --single-transaction --quick --lock-tables=false -u _f01c932f54a0f062 -pJ6Q8R1FRFuGbdntZ _f01c932f54a0f062 -h 127.0.0.1 -P 3306   | /usr/bin/gzip >> ./visit.test/private/backups/20210223_043003-visit_test-database.sql.gz
+
+Backup Summary for visit.test at 2021-02-23 04:30:04.743825
+Config  : ./visit.test/private/backups/20210223_043003-visit_test-site_config_backup.json 94.0B
+Database: ./visit.test/private/backups/20210223_043003-visit_test-database.sql.gz         224.3KiB
+Backup for Site visit.test has been successfully completed
